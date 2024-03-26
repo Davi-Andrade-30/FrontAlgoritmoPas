@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    text-align: center;
+}
+
+#blocos {
+    margin-top: 10px;
+}
+
+.bloco {
+    margin-bottom: 10px;
+}
+
+.salas {
+    margin-left: 20px;
+}
+
+.salas .sala {
+    margin-bottom: 5px;
+}
+
+.btn-adicionar-bloco,
+.btn-adicionar-profs,
+.btn-adicionar-disciplinas,
+.btn-adicionar-sala {
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+    background: #FFFFFF;
+    color: #000000;
+    border: 1px solid #C4D1EB;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px #E2E2E2;
+    transition: .3s ease;
+}
+
+.btn-adicionar-bloco:hover,
+.btn-adicionar-profs:hover,
+.btn-adicionar-disciplinas:hover,
+.btn-adicionar-sala:hover {
+    background-color: #0059ff;
+}
+
+.input-container {
+    margin-top: 10px;
+}
+
+.custom_input {
+    display: flex;
+	align-items: center;
+	position: relative;
+	max-width: 100%;
+}
+
+.input {
+    font-size: 10px;
+    padding: 5px 10px;
+    flex: 1; /* Adicionando flexibilidade para ocupar o espaço disponível */
+    outline: none;
+    background: #FFFFFF;
+    color: #000000;
+    border: 2px solid #C4D1EB; /* Alteração na largura da borda */
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px #E2E2E2;
+    transition: .3s ease;
+}
+
+.input:focus {
+    background: #F2F2F2;
+	border: 3px solid #5A7EC7; /* Alteração na largura da borda ao focar */
+	border-radius: 10px;
+}
+
+.input::placeholder {
+    color: #757575;
+}
+
+
+
+.btn-enviar-planilha {
+    font-size: 22px;
+    padding: 10px 20px; /* Ajustando o padding */
+    margin: 20px auto; /* Centralizando vertical e horizontalmente */
+    display: block; /* Para garantir que o botão não ocupe toda a largura */
+    outline: none;
+    background: #FFFFFF;
+    color: #000000;
+    border: 1px solid #C4D1EB;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px #E2E2E2;
+    transition: .3s ease;
+}
+
+.btn-enviar-planilha:focus {
+    background: #F2F2F2;
+    border: 1px solid #5A7EC7;
+    border-radius: 10px;
+}
+
+
+  
+  
+  
