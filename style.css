@@ -2,12 +2,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
 #container {
     text-align: center;
+    background-color: #80BF8A;
+    border-radius: 10px;
+    padding: 30px;
 }
 
 #blocos {
@@ -16,6 +21,7 @@ body {
 
 .bloco {
     margin-bottom: 10px;
+    color: #F2F2F2;
 }
 
 .salas {
@@ -34,11 +40,11 @@ body {
     padding: 5px 10px;
     width: 100%;
     outline: none;
-    background: #FFFFFF;
-    color: #000000;
-    border: 1px solid #C4D1EB;
+    background: #F2F2F2;
+    color: #1E5927;
+    border: 1px solid #80BF8A;
     border-radius: 5px;
-    box-shadow: 3px 3px 2px 0px #E2E2E2;
+    box-shadow: 3px 3px 2px 0px #80BF8A;
     transition: .3s ease;
 }
 
@@ -46,7 +52,7 @@ body {
 .btn-adicionar-profs:hover,
 .btn-adicionar-disciplinas:hover,
 .btn-adicionar-sala:hover {
-    background-color: #0059ff;
+    background-color: #B0D9B2;
 }
 
 .input-container {
@@ -55,54 +61,209 @@ body {
 
 .custom_input {
     display: flex;
-	align-items: center;
-	position: relative;
-	max-width: 100%;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
 }
 
 .input {
     font-size: 10px;
     padding: 5px 10px;
-    flex: 1; /* Adicionando flexibilidade para ocupar o espaço disponível */
+    flex: 1;
     outline: none;
-    background: #FFFFFF;
-    color: #000000;
-    border: 2px solid #C4D1EB; /* Alteração na largura da borda */
+    background: #F2F2F2;
+    color: #1E5927;
+    border: 2px solid #80BF8A;
     border-radius: 5px;
-    box-shadow: 3px 3px 2px 0px #E2E2E2;
+    box-shadow: 3px 3px 2px 0px #80BF8A;
     transition: .3s ease;
 }
 
 .input:focus {
     background: #F2F2F2;
-	border: 3px solid #5A7EC7; /* Alteração na largura da borda ao focar */
-	border-radius: 10px;
+    border: 3px solid #80BF8A;
+    border-radius: 10px;
 }
 
 .input::placeholder {
-    color: #757575;
+    color: #1E5927;
 }
-
-
 
 .btn-enviar-planilha {
     font-size: 22px;
-    padding: 10px 20px; /* Ajustando o padding */
-    margin: 20px auto; /* Centralizando vertical e horizontalmente */
-    display: block; /* Para garantir que o botão não ocupe toda a largura */
+    padding: 10px 20px;
+    margin: 20px auto;
     outline: none;
-    background: #FFFFFF;
-    color: #000000;
-    border: 1px solid #C4D1EB;
+    background: #F2F2F2;
+    color: #1E5927;
+    border: 1px solid #80BF8A;
     border-radius: 5px;
-    box-shadow: 3px 3px 2px 0px #E2E2E2;
+    box-shadow: 3px 3px 2px 0px #80BF8A;
     transition: .3s ease;
 }
 
 .btn-enviar-planilha:focus {
     background: #F2F2F2;
-    border: 1px solid #5A7EC7;
+    border: 1px solid #80BF8A;
     border-radius: 10px;
+}
+
+#menu {
+    background: #B0D9B2;
+    padding-left: 18px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+#menu ul,
+#menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+}
+
+#menu ul {
+    width: 100%;
+    text-align: center;
+}
+
+#menu li {
+    display: inline-block;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: 45px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#menu a.dropdown-arrow:after {
+    content: "\25BE";
+    margin-left: 5px;
+}
+
+#menu li a:hover {
+    color: #0099CC;
+    background: #F2F2F2;
+}
+
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 45px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer
+}
+
+#menu label {
+    display: none;
+    line-height: 45px;
+    text-align: center;
+    position: absolute;
+    left: 35px
+}
+
+#menu label:before {
+    font-size: 1.6em;
+    color: #FFFFFF;
+    content: "\2261";
+    margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: #B0D9B2;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#menu ul.sub-menus li {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+#menu ul.sub-menus a {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#menu li:hover ul.sub-menus {
+    display: block
+}
+
+#menu ul.sub-menus a:hover {
+    background: #F2F2F2;
+    color: #444444;
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        position: relative;
+    }
+
+    #menu ul {
+        background: #B0D9B2;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none;
+        text-align: center;
+    }
+
+    #menu ul.sub-menus {
+        width: 100%;
+        position: static;
+    }
+
+    #menu ul.sub-menus a {
+        padding-left: 30px;
+    }
+
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+
+    #menu input,
+    #menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+
+    #menu input {
+        z-index: 4;
+    }
+
+    #menu input:checked+label {
+        color: #FFFFFF;
+    }
+
+    #menu input:checked+label:before {
+        content: "\00d7";
+    }
+
+    #menu input:checked~ul {
+        display: block;
+    }
 }
 
 
